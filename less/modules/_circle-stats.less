@@ -1,0 +1,59 @@
+// ------------------------------
+// Circle Stats Module
+// ------------------------------
+
+.circleStatsItemBox {
+    position: relative;
+    width:100%;
+    margin: 10px auto;
+    .box-sizing(content-box);
+    text-align: center;
+
+    .header {
+        color: @content-color;
+        width: 100%;
+        height: 20px;
+        padding: 5px 0px;
+        position: absolute;
+        top: 0px;
+        .box-sizing(content-box);
+    }
+
+    .content {
+        position: relative;
+
+        .value {
+            font-size: 36px;
+            position: absolute;
+            top: 40px;
+            width: 100%;
+            left: 0px;
+            text-align: center;
+            color: @color-peter-river;
+        }
+
+        .percent {
+            font-size: 12px;
+            position: absolute;
+            top: 90px;
+            width: 100%;
+            left: 0px;
+            text-align: center;
+            color: @color-peter-river;
+        }
+    }
+
+    .footer {
+        width: 100%;
+        padding: 5px 0px;
+        .box-sizing(content-box);
+
+        .count{
+            font-size: 10px;
+        }
+
+        .value{
+            font-weight: bold;
+        }
+    }
+}

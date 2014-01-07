@@ -1,0 +1,30 @@
+// ------------------------------
+// Menu Module
+// ------------------------------
+
+
+// Core
+// ------------------------------
+.menu {
+    background-color: @color-white;
+    border: 1px solid @border-color;
+    border-bottom-width: 2px;
+    .border-radius(3px);
+    padding: 15px;
+
+    li {
+        .border-radius(3px);
+
+        a:hover {
+            background-color: transparent;
+        }
+    }
+
+    .active {
+        background-color: @menu-active-bgcolor;
+
+        a {
+            color: @menu-active-color;
+        }
+    }
+}
