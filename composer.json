@@ -1,0 +1,13 @@
+{
+    "name": "centralreport/design",
+    "description": "CentralReport web design",
+    "require": {
+        "twbs/bootstrap": "3.0.*@dev"
+    },
+    "authors": [
+        {
+            "name": "Charles-Emmanuel",
+            "email": "che.camus@gmail.com"
+        }
+    ]
+}
