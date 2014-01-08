@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "3e8a2e03983b58d7c496cd48ab19152e",
+    "hash": "ed9e04c4c95fc11747b0a4bfea5ccbcf",
     "packages": [
         {
             "name": "cornernote/highcharts-assets",
@@ -78,16 +78,16 @@
         },
         {
             "name": "twbs/bootstrap",
-            "version": "dev-master",
+            "version": "v3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "1736bcb05cb2c0b96825099fbb05b93ba4f327e5"
+                "reference": "6d03173a1aad98e75f7d33e65b411c519176c59a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/1736bcb05cb2c0b96825099fbb05b93ba4f327e5",
-                "reference": "1736bcb05cb2c0b96825099fbb05b93ba4f327e5",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/6d03173a1aad98e75f7d33e65b411c519176c59a",
+                "reference": "6d03173a1aad98e75f7d33e65b411c519176c59a",
                 "shasum": ""
             },
             "type": "library",
@@ -98,7 +98,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "Apache-2.0"
             ],
             "authors": [
                 {
@@ -116,7 +116,7 @@
                 "bootstrap",
                 "css"
             ],
-            "time": "2014-01-08 19:01:03"
+            "time": "2013-12-05 16:09:10"
         }
     ],
     "packages-dev": [
@@ -127,7 +127,6 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "twbs/bootstrap": 20,
         "cornernote/highcharts-assets": 20
     },
     "platform": [

@@ -4,7 +4,7 @@
     "require": {
         "cornernote/highcharts-assets": "dev-master",
         "FortAwesome/Font-Awesome": "*",
-        "twbs/bootstrap": "3.0.*@dev"
+        "twbs/bootstrap": "3.0.3"
     },
     "authors": [
         {
