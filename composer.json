@@ -2,8 +2,9 @@
     "name": "centralreport/design",
     "description": "CentralReport web design",
     "require": {
-        "twbs/bootstrap": "3.0.*@dev",
-        "FortAwesome/Font-Awesome": "*"
+        "cornernote/highcharts-assets": "dev-master",
+        "FortAwesome/Font-Awesome": "*",
+        "twbs/bootstrap": "3.0.*@dev"
     },
     "authors": [
         {

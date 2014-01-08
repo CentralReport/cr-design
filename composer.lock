@@ -3,8 +3,31 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "c5b90ae9b46e0d0a29a7b1f1908d3dfe",
+    "hash": "3e8a2e03983b58d7c496cd48ab19152e",
     "packages": [
+        {
+            "name": "cornernote/highcharts-assets",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cornernote/highcharts-assets.git",
+                "reference": "ebe073598e59694cd5e48c04bc261f0570cf987d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cornernote/highcharts-assets/zipball/ebe073598e59694cd5e48c04bc261f0570cf987d",
+                "reference": "ebe073598e59694cd5e48c04bc261f0570cf987d",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Interactive Javascript Charts - JS Only",
+            "keywords": [
+                "highcharts",
+                "mrphp"
+            ],
+            "time": "2013-12-26 01:18:37"
+        },
         {
             "name": "fortawesome/font-awesome",
             "version": "v4.0.3",
@@ -59,12 +82,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "5f328dce889823f1ec78844427a48da4c2eb6638"
+                "reference": "1736bcb05cb2c0b96825099fbb05b93ba4f327e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/5f328dce889823f1ec78844427a48da4c2eb6638",
-                "reference": "5f328dce889823f1ec78844427a48da4c2eb6638",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/1736bcb05cb2c0b96825099fbb05b93ba4f327e5",
+                "reference": "1736bcb05cb2c0b96825099fbb05b93ba4f327e5",
                 "shasum": ""
             },
             "type": "library",
@@ -93,7 +116,7 @@
                 "bootstrap",
                 "css"
             ],
-            "time": "2014-01-07 08:31:27"
+            "time": "2014-01-08 19:01:03"
         }
     ],
     "packages-dev": [
@@ -104,7 +127,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "twbs/bootstrap": 20
+        "twbs/bootstrap": 20,
+        "cornernote/highcharts-assets": 20
     },
     "platform": [
 
