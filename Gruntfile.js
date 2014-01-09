@@ -3,6 +3,9 @@ module.exports = function(grunt) {
     // Load grunt tasks automatically
     require('load-grunt-tasks')(grunt);
 
+    // Displays the time taken for each task
+    require('time-grunt')(grunt);
+
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
