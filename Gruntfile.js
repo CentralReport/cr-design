@@ -10,6 +10,16 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        bower: {
+            install: {
+                options: {
+                    copy: false,
+                    verbose: true,
+                    targetDir: './vendor' // TODO - Remove this once "https://github.com/yatskevich/grunt-bower-task/pull/87" is merged
+                }
+            }
+        },
+
         less: {
             development: {
                 options: {
@@ -42,6 +52,5 @@ module.exports = function(grunt) {
     });
 
     // Default task(s).
-    grunt.registerTask('default', ['less', 'uglify']);
-
+    grunt.registerTask('default', ['bower', 'less', 'uglify']);
 };
