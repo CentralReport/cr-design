@@ -9,15 +9,7 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        uglify: {
-            options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-            },
-            build: {
-                src: 'vendor/twbs/bootstrap/js/alert.js',
-                dest: 'build/alert.min.js'
-            }
-        },
+
         less: {
             development: {
                 options: {
@@ -36,10 +28,20 @@ module.exports = function(grunt) {
                     "build/centralreport.min.css": "less/main.less"
                 }
             }
+        },
+
+        uglify: {
+            options: {
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+            },
+            build: {
+                src: 'vendor/twbs/bootstrap/js/alert.js',
+                dest: 'build/alert.min.js'
+            }
         }
     });
 
     // Default task(s).
-    grunt.registerTask('default', ['uglify', 'less']);
+    grunt.registerTask('default', ['less', 'uglify']);
 
 };
