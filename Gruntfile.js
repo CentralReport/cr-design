@@ -45,7 +45,7 @@ module.exports = function(grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
-                src: 'vendor/twbs/bootstrap/js/alert.js',
+                src: 'vendor/bootstrap/js/alert.js',
                 dest: 'build/alert.min.js'
             }
         }
