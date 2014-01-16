@@ -31,36 +31,66 @@ module.exports = function(grunt) {
         less: {
             development: {
                 options: {
-                    paths: ["<%= cr.dirs.less %>, <%= cr.dirs.vendor %>/bootstrap/less"],
+                    paths: ["<%= cr.dirs.less %>, <%= cr.dirs.vendor %>/bootstrap/less, <%= cr.dirs.vendor %>/font-awesome/less"],
                     report: 'gzip'
                 },
                 files: {
-                    "build/centralreport.css": "<%= cr.dirs.less %>/main.less"
+                    "<%= cr.dirs.build %>/css/centralreport.css": "<%= cr.dirs.less %>/main.less"
                 }
             },
             production: {
                 options: {
-                    paths: ["assets/css"],
+                    paths: ["<%= cr.dirs.less %>, <%= cr.dirs.vendor %>/bootstrap/less, <%= cr.dirs.vendor %>/font-awesome/less"],
                     report: 'gzip',
                     cleancss: true
                 },
                 files: {
-                    "build/centralreport.min.css": "<%= cr.dirs.less %>/main.less"
+                    "<%= cr.dirs.build %>/css/centralreport.min.css": "<%= cr.dirs.less %>/main.less"
                 }
             }
         },
 
         uglify: {
-            options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+            development: {
+                options: {
+                    banner: '/*! <%= pkg.name %> - DEV - <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+                    beautify: true,
+                    mangle: false
+                },
+                files: {
+                    '<%= cr.dirs.build %>/js/centralreport.js' : [
+                        '<%= cr.dirs.vendor %>/jquery/jquery.js',
+                        '<%= cr.dirs.vendor %>/bootstrap/js/*.js',
+                        '<%= cr.dirs.vendor %>/flot/jquery.flot*.js'
+                    ]
+                }
             },
-            build: {
-                src: '<%= cr.dirs.vendor %>/bootstrap/js/alert.js',
-                dest: 'build/alert.min.js'
+            production: {
+                options: {
+                    banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+                },
+                files: {
+                    '<%= cr.dirs.build %>/js/centralreport.min.js' : [
+                        '<%= cr.dirs.vendor %>/jquery/jquery.js',
+                        '<%= cr.dirs.vendor %>/bootstrap/js/*.js',
+                        '<%= cr.dirs.vendor %>/flot/jquery.flot*.js'
+                    ]
+                }
+            }
+        },
+
+        copy: {
+            main: {
+                expand: true,
+                flatten: true,
+                filter: 'isFile',
+                cwd: '<%= cr.dirs.vendor %>/font-awesome/fonts/',
+                src: '**',
+                dest: '<%= cr.dirs.build %>/fonts/'
             }
         }
     });
 
     // Default task(s).
-    grunt.registerTask('default', ['bower', 'less', 'uglify']);
+    grunt.registerTask('default', ['bower', 'less', 'uglify', 'copy']);
 };
