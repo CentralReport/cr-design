@@ -62,5 +62,5 @@ module.exports = function(grunt) {
     });
 
     // Default task(s).
-    grunt.registerTask('default', ['bower', 'composer:update', 'less', 'uglify']);
+    grunt.registerTask('default', ['bower', 'less', 'uglify']);
 };
