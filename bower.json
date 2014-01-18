@@ -1,0 +1,9 @@
+{
+  "name": "CentralReport Design",
+  "private": true,
+    "dependencies": {
+        "bootstrap": "3.0.*",
+        "font-awesome": "4.0.*",
+        "flot": "0.8.*"
+    }
+}

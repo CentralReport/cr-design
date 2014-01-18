@@ -1,0 +1,103 @@
+// ------------------------------
+// - LESS Variables
+// ------------------------------
+
+// TODO - Rename this vars using dashes
+
+// Colors
+// -------------------------
+@color-alizarin:    #e74c3c;
+@color-amehyst:     #9b59b6;
+@color-asphalt:     #34495e;
+@color-black:       #000000;
+@color-carrot:      #e67e22;
+@color-clouds:      #ecf0f1;
+@color-concrete:    #95a5a6;
+@color-emerald:     #2ecc71;
+@color-gray:        #e5e5e5;
+@color-peter-river: #3498db;
+@color-sunflower:   #f1c40f;
+@color-turquoise:   #1abc9c;
+@color-white:       #ffffff;
+
+
+// Typography
+// -------------------------
+@normalFontSize:   1em;
+@normalLineHeight: 1.5;
+@baseFontFamily:   "Helvetica Neue", "Helvetica", Arial, sans-serif;
+@content-color:     @color-asphalt;
+
+
+// General
+// -------------------------
+@body-bg-color:      @color-gray;
+@border-color:       darken(@color-gray, 5%);
+
+@color-danger:         @color-alizarin;
+@color-danger-text:    @color-white;
+@color-info:           @color-peter-river;
+@color-success:        @color-emerald;
+@color-success-text:   @color-white;
+@color-warning:        @color-sunflower;
+@color-warning-text:   @color-white;
+@color-warning-danger: @color-carrot;
+@color-warning-text:   @color-white;
+
+// Modules
+// -------------------------
+
+// - Boxes
+@box-heading-bg-color: @color-peter-river;
+@box-heading-color: @color-white;
+@box-heading-warning-bg-color: @color-carrot;
+@box-heading-warning-color: @color-white;
+
+// - Sub Navigation
+@subnavColor: lighten(@navbar-color, 10%);
+
+// - Lists
+@list-stats-bg-color: lighten(@color-peter-river, 10);
+@list-stats-bg-color-odd: lighten(@color-peter-river, 15);
+@list-stats-color: @color-white;
+
+// - Menus
+@menu-active-bgcolor: @color-peter-river;
+@menu-active-color: @color-white;
+@menu-bgcolor: @color-white;
+
+// - Navbar
+@navbar-color: @color-white;
+
+// - Notes
+@note-danger-border: lighten(@color-danger, 10%);
+@note-danger-color-bg: lighten(@color-danger, 40%);
+
+@note-info-border:   lighten(@color-info, 10%);
+@note-info-color-bg: lighten(@color-info, 40%);
+
+@note-success-border:   lighten(@color-success, 10%);
+@note-success-color-bg: lighten(@color-success, 40%);
+
+@note-warning-border:   lighten(@color-warning, 10%);
+@note-warning-color-bg: lighten(@color-warning, 40%);
+
+// - SmallStats
+@smallstart-content-color: @color-asphalt;
+@smallstart-subcontent-color: #c7cbd5;
+
+// - Stats
+@stat-danger-border:  lighten(@color-danger, 10%);
+@stat-default-border: lighten(@color-concrete, 10%);
+@stat-info-border:    lighten(@color-info, 10%);
+@stat-success-border: lighten(@color-success, 10%);
+@stat-warning-border: lighten(@color-warning, 10%);
+
+// - Steps
+@step-heading-color: @color-concrete;
+
+// Paths
+// -------------------------
+@FontAwesomePath: '@{fontPath}/FontAwesome';
+@fontPath:        '../../../font';
+@vendorAssetPath: '../../vendor';

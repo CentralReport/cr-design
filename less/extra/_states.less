@@ -1,0 +1,20 @@
+// ------------------------------
+// - States
+// ------------------------------
+
+// Lists
+// ------------------------------
+.list-hosts li {
+    border: none;
+    border-left: 3px solid transparent;
+
+    &:hover {
+        background-color: @note-success-color-bg;
+        border-color: @note-success-border;
+    }
+
+    &:hover.is-not-validated {
+        background-color: @note-warning-color-bg;
+        border-color: @note-warning-border;
+    }
+}
