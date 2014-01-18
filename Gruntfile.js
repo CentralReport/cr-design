@@ -10,9 +10,10 @@ module.exports = function(grunt) {
     grunt.initConfig({
         cr: {
             dirs: {
-                build: './dist',
-                less: './less',
-                vendor: './vendor'
+                cwd: './',
+                build: '<%= cr.dirs.cwd %>dist',
+                less: '<%= cr.dirs.cwd %>less',
+                vendor: '<%= cr.dirs.cwd %>vendor'
             }
         },
 
@@ -31,7 +32,11 @@ module.exports = function(grunt) {
         less: {
             development: {
                 options: {
-                    paths: ["<%= cr.dirs.less %>, <%= cr.dirs.vendor %>/bootstrap/less, <%= cr.dirs.vendor %>/font-awesome/less"],
+                    paths: [
+                        '<%= cr.dirs.less %>',
+                        '<%= cr.dirs.vendor %>/bootstrap/less',
+                        '<%= cr.dirs.vendor %>/font-awesome/less'
+                    ],
                     report: 'gzip'
                 },
                 files: {
@@ -40,7 +45,11 @@ module.exports = function(grunt) {
             },
             production: {
                 options: {
-                    paths: ["<%= cr.dirs.less %>, <%= cr.dirs.vendor %>/bootstrap/less, <%= cr.dirs.vendor %>/font-awesome/less"],
+                    paths: [
+                        '<%= cr.dirs.less %>',
+                        '<%= cr.dirs.vendor %>/bootstrap/less',
+                        '<%= cr.dirs.vendor %>/font-awesome/less'
+                    ],
                     report: 'gzip',
                     cleancss: true
                 },
