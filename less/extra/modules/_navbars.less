@@ -2,9 +2,148 @@
 // Navbar Module
 // ------------------------------
 
-
-// Types
-// ------------------------------
-.navbar-white {
-    background-color: @navbar-color;
+/* Top Right Navigation Dropdown Styles */
+.navbar-top-links li {
+  display: inline-block;
 }
+
+.navbar-top-links li:last-child {
+  margin-right: 15px;
+}
+
+.navbar-top-links li a {
+  padding: 12px;
+  min-height: @navbar-height;
+}
+
+.navbar-top-links .dropdown-menu li {
+  display: block;
+}
+
+.navbar-top-links .dropdown-menu li:last-child {
+  margin-right: 0;
+}
+
+.navbar-top-links .dropdown-menu li a {
+  padding: 3px 20px;
+  min-height: 0;
+}
+
+.navbar-top-links .dropdown-menu li a div {
+  white-space: normal;
+}
+
+.navbar-top-links .dropdown-messages,
+.navbar-top-links .dropdown-tasks,
+.navbar-top-links .dropdown-alerts {
+  width: 310px;
+  min-width: 0;
+}
+
+.navbar-top-links .dropdown-messages {
+  margin-left: 5px;
+}
+
+.navbar-top-links .dropdown-tasks {
+  margin-left: -59px;
+}
+
+.navbar-top-links .dropdown-alerts {
+  margin-left: -123px;
+}
+
+.navbar-top-links .dropdown-user {
+  right: 0;
+  left: auto;
+}
+
+/* Top Right Navigation Dropdown Styles */
+
+
+
+/* Top Right Navigation Dropdown Styles */
+@media (max-width: 768px) {
+  .navbar-left {
+    margin-top: @navbar-height;
+  }
+}
+
+@media (min-width: 768px) {
+  .sidebar-collapse {
+    width: auto;
+    border-top: 0;
+    box-shadow: none;
+  }
+  .sidebar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+  .sidebar-collapse.in {
+    overflow-y: visible;
+  }
+}
+
+.navbar-static-side ul li {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+@media(min-width:768px) {
+  .navbar-static-side {
+    z-index: 1;
+    position: absolute;
+    width: @navbar-left-width;
+  }
+}
+
+.navbar-left {
+  background-color: @navbar-left-bg;
+  min-height: 100%;
+  border-right: 1px solid @color-concrete;
+}
+
+.navbar-left a {
+  color: @color-white;
+}
+
+.nav > li > a {
+  color: @color-clouds;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  color: #000000;
+  background-color: #fafafa;
+}
+
+.sidebar-search {
+  padding: 15px;
+}
+
+.arrow {
+  float: right;
+}
+
+.fa.arrow:before {
+  content: "\f104";
+}
+
+.active > a > .fa.arrow:before {
+  content: "\f107";
+}
+
+.nav-second-level li,
+.nav-third-level li {
+  border-bottom: none !important;
+}
+
+.nav-second-level li a {
+  padding-left: 37px;
+}
+
+.nav-third-level li a {
+  padding-left: 52px;
+}
+
+

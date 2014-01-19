@@ -15,6 +15,7 @@
 @color-concrete:    #95a5a6;
 @color-emerald:     #2ecc71;
 @color-gray:        #e5e5e5;
+@color-dark-gray:   #2e3333;
 @color-peter-river: #3498db;
 @color-sunflower:   #f1c40f;
 @color-turquoise:   #1abc9c;
@@ -23,58 +24,73 @@
 
 // Typography
 // -------------------------
-@normalFontSize:   1em;
-@normalLineHeight: 1.5;
-@baseFontFamily:   "Helvetica Neue", "Helvetica", Arial, sans-serif;
-@content-color:     @color-asphalt;
+@normalFontSize:        1em;
+@normalLineHeight:      1.5;
+@baseFontFamily:        "Helvetica Neue", "Helvetica", Arial, sans-serif;
+@content-color:         @color-asphalt;
+@headings-font-weight:  300;
+@normal-font-weight:    300;
 
+// Grid
+// -------------------------
+@grid-gutter-width:     15px;
 
 // General
 // -------------------------
-@body-bg-color:      @color-gray;
-@border-color:       darken(@color-gray, 5%);
+@body-bg-color:         #fafafa;
+@border-color:          darken(@color-gray, 5%);
 
-@color-danger:         @color-alizarin;
-@color-danger-text:    @color-white;
-@color-info:           @color-peter-river;
-@color-success:        @color-emerald;
-@color-success-text:   @color-white;
-@color-warning:        @color-sunflower;
-@color-warning-text:   @color-white;
-@color-warning-danger: @color-carrot;
-@color-warning-text:   @color-white;
+@color-danger:          @color-alizarin;
+@color-danger-text:     @color-white;
+@color-info:            @color-peter-river;
+@color-success:         @color-emerald;
+@color-success-text:    @color-white;
+@color-warning:         @color-sunflower;
+@color-warning-text:    @color-white;
+@color-warning-danger:  @color-carrot;
+@color-warning-text:    @color-white;
 
 // Modules
 // -------------------------
 
 // - Boxes
-@box-heading-bg-color: @color-peter-river;
-@box-heading-color: @color-white;
-@box-heading-warning-bg-color: @color-carrot;
-@box-heading-warning-color: @color-white;
+@box-heading-bg-color:          @color-peter-river;
+@box-heading-color:             @color-white;
+@box-heading-warning-bg-color:  @color-carrot;
+@box-heading-warning-color:     @color-white;
 
 // - Sub Navigation
-@subnavColor: lighten(@navbar-color, 10%);
+@subnavColor: lighten(@navbar-default-bg, 10%);
 
 // - Lists
-@list-stats-bg-color: lighten(@color-peter-river, 10);
+@list-stats-bg-color:     lighten(@color-peter-river, 10);
 @list-stats-bg-color-odd: lighten(@color-peter-river, 15);
-@list-stats-color: @color-white;
+@list-stats-color:        @color-white;
 
 // - Menus
-@menu-active-bgcolor: @color-peter-river;
-@menu-active-color: @color-white;
-@menu-bgcolor: @color-white;
+@menu-active-bgcolor:   @color-peter-river;
+@menu-active-color:     @color-white;
+@menu-bgcolor:          @color-white;
 
 // - Navbar
-@navbar-color: @color-white;
+@navbar-height:         45px;
+@navbar-default-bg:     #242527;
+@navbar-default-color:  @color-clouds;
+
+@navbar-default-link-color:         @color-clouds;
+@navbar-default-link-active-color:  @color-clouds;
+@navbar-default-link-hover-color:   darken(@navbar-default-link-color, 6.5%);
+
+@navbar-left-width:     200px;
+@navbar-left-bg:        #35363A;
+
 
 // - Notes
-@note-danger-border: lighten(@color-danger, 10%);
-@note-danger-color-bg: lighten(@color-danger, 40%);
+@note-danger-border:    lighten(@color-danger, 10%);
+@note-danger-color-bg:  lighten(@color-danger, 40%);
 
-@note-info-border:   lighten(@color-info, 10%);
-@note-info-color-bg: lighten(@color-info, 40%);
+@note-info-border:      lighten(@color-info, 10%);
+@note-info-color-bg:    lighten(@color-info, 40%);
 
 @note-success-border:   lighten(@color-success, 10%);
 @note-success-color-bg: lighten(@color-success, 40%);
@@ -83,8 +99,8 @@
 @note-warning-color-bg: lighten(@color-warning, 40%);
 
 // - SmallStats
-@smallstart-content-color: @color-asphalt;
-@smallstart-subcontent-color: #c7cbd5;
+@smallstart-content-color:      @color-asphalt;
+@smallstart-subcontent-color:   #c7cbd5;
 
 // - Stats
 @stat-danger-border:  lighten(@color-danger, 10%);
