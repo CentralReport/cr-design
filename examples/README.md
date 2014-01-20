@@ -8,4 +8,4 @@ From the parent folder, just run:
 grunt
 ```
 
-The mandatory files (CSS, JS, fonts, images and others) will be created in the ```dist/``` folder.
+Mandatory files (CSS, JS, fonts, images and others) will be created in the ```dist/``` folder.

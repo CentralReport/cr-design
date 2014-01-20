@@ -62,13 +62,13 @@
 
 
 /* Top Right Navigation Dropdown Styles */
-@media (max-width: 768px) {
+@media (max-width: @screen-sm-min) {
   .navbar-left {
     margin-top: @navbar-height;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: @screen-sm-min) {
   .sidebar-collapse {
     width: auto;
     border-top: 0;
@@ -89,7 +89,7 @@
   border-bottom: 1px solid #e7e7e7;
 }
 
-@media(min-width:768px) {
+@media(min-width:@screen-sm-min) {
   .navbar-static-side {
     z-index: 1;
     position: absolute;

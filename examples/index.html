@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+
     <title>CentralReport design</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link rel="stylesheet" type="text/css" href="../dist/css/main.css">
     <script src="../dist/js/centralreport.js"></script>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
 <!-- Fixed navbar -->
@@ -60,31 +62,16 @@
                     <!-- /.nav-second-level -->
                 </li>
                 <li>
-                    <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                    <a href="forms.html"><i class="fa fa-list fa-fw"></i> Processes</a>
                 </li>
                 <li>
-                    <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                    <a href="forms.html"><i class="fa fa-warning fa-fw"></i> Alerts</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="panels-wells.html">Panels and Wells</a>
-                        </li>
-                        <li>
-                            <a href="buttons.html">Buttons</a>
-                        </li>
-                        <li>
-                            <a href="notifications.html">Notifications</a>
-                        </li>
-                        <li>
-                            <a href="typography.html">Typography</a>
-                        </li>
-                        <li>
-                            <a href="grid.html">Grid</a>
-                        </li>
-                    </ul>
-                    <!-- /.nav-second-level -->
+                    <a href="tables.html"><i class="fa fa-laptop fa-fw"></i> Host info</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-wrench fa-fw"></i> Settings</a>
                 </li>
             </ul>
             <!-- /#side-menu -->
@@ -96,33 +83,41 @@
     <div id="page-wrapper">
 
         <div class="row">
-            <h2>Dashboard <small>local data</small></h2>
+            <h2> Trinity <small>dashboard</small></h2>
+            <div class="note note-warning">
+                <i class="fa fa-warning"></i> Memory consumption is high.
+            </div>
         </div>
 
         <div class="row">
             <div class="col-md-2 col-sm-2">
                 <div class="box">
-                    Status
+                    Status <br />
+                    <i class="fa fa-check"></i> Good health
                 </div>
             </div>
             <div class="col-sm-2">
                 <div class="box">
-                    Load
+                    Load <br />
+                    <i class="fa fa-check"></i> 1.21
                 </div>
             </div>
             <div class="col-sm-2">
                 <div class="box">
-                    CPU
+                    CPU <br />
+                    <i class="fa fa-check"></i> 10 %
                 </div>
             </div>
             <div class="col-sm-2">
                 <div class="box">
-                    Memory
+                    Memory <br />
+                    <i class="fa fa-warning"></i> 99 %
                 </div>
             </div>
             <div class="col-sm-2">
                 <div class="box">
-                    Disks
+                    Disks <br />
+                    <i class="fa fa-check"></i> 3 OK
                 </div>
             </div>
             <div class="col-sm-2">
