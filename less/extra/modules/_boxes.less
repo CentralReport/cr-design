@@ -47,3 +47,56 @@
         font-size: 20px;
     }
 }
+
+// Status box
+// ------------------------------
+.box-status {
+  .box();
+  .clearfix();
+
+  padding: 3px 0;
+}
+
+.box-status .state {
+  .pull-left();
+
+  width: 33%;
+  text-align: center;
+  font-size: (@normalFontSize * 2);
+}
+
+.box-status .details {
+  .pull-left();
+
+  .title {
+    font-weight: normal;
+  }
+
+  .value {
+    font-size: (@normalFontSize * 2);
+    line-height: 1em;
+  }
+
+}
+
+.box-status .status-success {
+  color: @color-success;
+}
+
+.box-status .status-warning {
+  color: @color-warning;
+}
+
+.box-status .status-error {
+  color: @color-danger;
+}
+
+.box-warning {
+  background-color: @color-warning-danger;
+  color: @color-warning-text;
+}
+
+.box-danger {
+  background-color: @color-danger;
+  color: @color-danger-text;
+}

@@ -69,8 +69,8 @@ module.exports = function(grunt) {
                 files: {
                     '<%= cr.dirs.build %>/js/centralreport.js' : [
                         '<%= cr.dirs.vendor %>/jquery/jquery.js',
-                        '<%= cr.dirs.vendor %>/bootstrap/js/*.js',
-                        '<%= cr.dirs.vendor %>/flot/jquery.flot*.js'
+                        '<%= cr.dirs.vendor %>/bootstrap/dist/js/bootstrap.js',
+                        '<%= cr.dirs.vendor %>/flot/jquery.flot.js'
                     ]
                 }
             },
@@ -81,8 +81,8 @@ module.exports = function(grunt) {
                 files: {
                     '<%= cr.dirs.build %>/js/centralreport.min.js' : [
                         '<%= cr.dirs.vendor %>/jquery/jquery.js',
-                        '<%= cr.dirs.vendor %>/bootstrap/js/*.js',
-                        '<%= cr.dirs.vendor %>/flot/jquery.flot*.js'
+                        '<%= cr.dirs.vendor %>/bootstrap/dist/js/bootstrap.js',
+                        '<%= cr.dirs.vendor %>/flot/jquery.flot.js'
                     ]
                 }
             }
