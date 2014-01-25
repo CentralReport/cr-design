@@ -97,6 +97,13 @@ module.exports = function(grunt) {
                 cwd: '<%= cr.dirs.vendor %>/font-awesome/fonts/',
                 src: '**',
                 dest: '<%= cr.dirs.build %>/fonts/'
+            },
+
+            examples: {
+                expand: true,
+                cwd: '<%= cr.dirs.build %>/',
+                src: '**',
+                dest: '<%= cr.dirs.examples %>/'
             }
         },
 
