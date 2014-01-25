@@ -112,9 +112,34 @@ module.exports = function(grunt) {
                 options: {
                     open: true,
                     base: [
-                        '<%= cr.dirs.examples %>index.html'
+                        '<%= cr.dirs.examples %>'
                     ]
                 }
+            }
+        },
+
+        // Watches files for changes and runs tasks based on the changed files
+        watch: {
+            js: {
+                files: ['<%= cr.dirs %>/scripts/{,*/}*.js'],
+                options: {
+                    livereload: true
+                }
+            },
+            gruntfile: {
+                files: ['Gruntfile.js']
+            },
+            styles: {
+                files: ['<%= cr.dirs.dist %>/css/{,*/}*.css']
+            },
+            livereload: {
+                options: {
+                    livereload: '<%= connect.options.livereload %>'
+                },
+                files: [
+                    '<%= cr.dirs.examples %>/{,*/}*.html'
+//                    '<%= yeoman.app %>/images/{,*/}*.{gif,jpeg,jpg,png,svg,webp}'
+                ]
             }
         }
     });
@@ -125,7 +150,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask('serve', function (target) {
         grunt.task.run([
-            'connect:livereload'
+            'connect:livereload',
+            'watch'
         ]);
     });
 };
