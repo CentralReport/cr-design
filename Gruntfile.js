@@ -12,6 +12,7 @@ module.exports = function(grunt) {
             dirs: {
                 cwd: './',
                 build: '<%= cr.dirs.cwd %>dist',
+                examples: '<%= cr.dirs.cwd %>examples',
                 less: '<%= cr.dirs.cwd %>less',
                 vendor: '<%= cr.dirs.cwd %>vendor'
             }
@@ -36,8 +37,7 @@ module.exports = function(grunt) {
                         '<%= cr.dirs.less %>',
                         '<%= cr.dirs.vendor %>/bootstrap/less',
                         '<%= cr.dirs.vendor %>/font-awesome/less'
-                    ],
-                    report: 'gzip'
+                    ]
                 },
                 files: {
                     "<%= cr.dirs.build %>/css/centralreport.css": "<%= cr.dirs.less %>/main.less"
@@ -96,10 +96,94 @@ module.exports = function(grunt) {
                 cwd: '<%= cr.dirs.vendor %>/font-awesome/fonts/',
                 src: '**',
                 dest: '<%= cr.dirs.build %>/fonts/'
+            },
+
+            styles: {
+                expand: true,
+                cwd: '<%= cr.dirs.build %>/css',
+                src: '**',
+                dest: '<%= cr.dirs.examples %>/css'
+            },
+
+            examples: {
+                expand: true,
+                cwd: '<%= cr.dirs.build %>/',
+                src: '**',
+                dest: '<%= cr.dirs.examples %>/'
+            }
+        },
+
+        // The actual grunt server settings
+        connect: {
+            options: {
+                port: 9000,
+                livereload: 35729,
+                // Change this to '0.0.0.0' to access the server from outside
+                hostname: 'localhost'
+            },
+            livereload: {
+                options: {
+                    open: true,
+                    base: [
+                        '<%= cr.dirs.examples %>'
+                    ]
+                }
+            }
+        },
+
+        // Watches files for changes and runs tasks based on the changed files
+        watch: {
+            js: {
+                files: ['<%= cr.dirs %>/scripts/{,*/}*.js'],
+                options: {
+                    livereload: true
+                }
+            },
+            gruntfile: {
+                files: ['Gruntfile.js']
+            },
+            styles: {
+                files: [
+                    '<%= cr.dirs.dist %>/css/{,*/}*.css'
+                ]
+            },
+            less: {
+                files: [
+                    '<%= cr.dirs.cwd %>/less/**/*.less'
+                ],
+                tasks: [
+                    "less:development",
+                    "copy:styles"
+                ]
+            },
+            livereload: {
+                options: {
+                    livereload: '<%= connect.options.livereload %>'
+                },
+                files: [
+                    '<%= cr.dirs.examples %>/css/*.css',
+                    '<%= cr.dirs.examples %>/js/*.js',
+                    '<%= cr.dirs.examples %>/index.html'
+                ]
             }
         }
     });
 
     // Default task(s).
-    grunt.registerTask('default', ['bower', 'less', 'uglify', 'copy']);
+    grunt.registerTask('default', [
+        'bower',
+        'less',
+        'uglify',
+        'copy'
+    ]);
+
+    grunt.registerTask('serve', function (target) {
+        grunt.task.run([
+            'less',
+            'uglify',
+            'copy:examples',
+            'connect:livereload',
+            'watch'
+        ]);
+    });
 };

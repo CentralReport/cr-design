@@ -1,4 +1,7 @@
 /build/
+/examples/css
+/examples/js
+/examples/fonts
 /dist/
 /node_modules/
 /vendor/
