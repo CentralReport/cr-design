@@ -12,6 +12,7 @@ module.exports = function(grunt) {
             dirs: {
                 cwd: './',
                 build: '<%= cr.dirs.cwd %>dist',
+                examples: '<%= cr.dirs.cwd %>examples',
                 less: '<%= cr.dirs.cwd %>less',
                 vendor: '<%= cr.dirs.cwd %>vendor'
             }
@@ -97,9 +98,34 @@ module.exports = function(grunt) {
                 src: '**',
                 dest: '<%= cr.dirs.build %>/fonts/'
             }
+        },
+
+        // The actual grunt server settings
+        connect: {
+            options: {
+                port: 9000,
+                livereload: 35729,
+                // Change this to '0.0.0.0' to access the server from outside
+                hostname: 'localhost'
+            },
+            livereload: {
+                options: {
+                    open: true,
+                    base: [
+                        '<%= cr.dirs.examples %>index.html'
+                    ]
+                }
+            }
         }
     });
 
     // Default task(s).
     grunt.registerTask('default', ['bower', 'less', 'uglify', 'copy']);
+
+
+    grunt.registerTask('serve', function (target) {
+        grunt.task.run([
+            'connect:livereload'
+        ]);
+    });
 };
