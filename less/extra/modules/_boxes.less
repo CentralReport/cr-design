@@ -35,7 +35,6 @@
     margin-top: 30px;
 }
 
-
 // Spaced
 // ------------------------------
 .box-spaced {
@@ -99,4 +98,14 @@
 .box-danger {
   background-color: @color-danger;
   color: @color-danger-text;
+}
+
+@media (max-width: @screen-md-min) {
+  .box {
+    margin-top: 5px;
+  }
+
+  .box-status {
+    margin-top: 5px;
+  }
 }

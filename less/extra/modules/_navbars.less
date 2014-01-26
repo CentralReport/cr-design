@@ -139,6 +139,21 @@
   .navbar-static-side {
     z-index: 1;
     position: absolute;
+  }
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-md-min) {
+  .navbar-static-side {
+    width: @navbar-left-sm-width;
+  }
+
+  .navbar-left .title {
+    display: none;
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  .navbar-static-side {
     width: @navbar-left-width;
   }
 }
