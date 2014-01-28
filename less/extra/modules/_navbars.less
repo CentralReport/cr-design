@@ -2,9 +2,111 @@
 // Navbar Module
 // ------------------------------
 
+/* Top Right Navigation Dropdown Styles */
+.navbar-top-links li {
+    display: inline-block;
+}
 
-// Types
-// ------------------------------
-.navbar-white {
-    background-color: @navbar-color;
+.navbar-top-links li:last-child {
+    margin-right: 15px;
+}
+
+.navbar-top-links li a {
+    padding: 12px;
+    min-height: @navbar-height;
+}
+
+.navbar-top-links .dropdown-menu li {
+    display: block;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    a {
+        padding: 3px 20px;
+        min-height: 0;
+    }
+
+    a div {
+        white-space: normal;
+    }
+}
+
+.navbar-top-links .dropdown-user {
+    right: 0;
+    left: auto;
+}
+
+/* Top Right Navigation Dropdown Styles */
+.navbar-left {
+    background-color: @navbar-left-bg;
+    min-height: 100%;
+}
+
+.navbar-left a {
+    color: @color-white;
+}
+
+.navbar-left .credits {
+    margin-top: 20px;
+    color: @color-gray;
+    width: 100%;
+    text-align: center;
+    font-size: (@normalFontSize / 1.2);
+}
+
+.nav > li > a {
+    color: @color-clouds;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+    color: #000000;
+    background-color: #fafafa;
+}
+
+@media (max-width: @screen-sm-min) {
+    .navbar-left {
+        margin-top: @navbar-height;
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    .sidebar-collapse {
+        width: auto;
+        border-top: 0;
+        box-shadow: none;
+    }
+    .sidebar-collapse.collapse {
+        display: block !important;
+        height: auto !important;
+        padding-bottom: 0;
+        overflow: visible !important;
+    }
+    .sidebar-collapse.in {
+        overflow-y: visible;
+    }
+
+    .navbar-static-side {
+        z-index: 1;
+        position: absolute;
+    }
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-md-min) {
+    .navbar-static-side {
+        width: @navbar-left-sm-width;
+    }
+
+    .navbar-left .title,
+    .navbar-left .credits {
+        display: none;
+    }
+}
+
+@media (min-width: @screen-md-min) {
+    .navbar-static-side {
+        width: @navbar-left-width;
+    }
 }

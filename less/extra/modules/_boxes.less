@@ -8,7 +8,6 @@
 .box {
     background-color: @color-white;
     border: 1px solid @border-color;
-    border-bottom-width: 2px;
     .border-radius(3px);
 }
 
@@ -17,10 +16,10 @@
     color: @box-heading-color;
     .border-radius(3px 3px 0 0);
 
-    font-size: 18px;
+    font-size: 16px;
 
     margin: 0;
-    padding: 10px 20px;
+    padding: 5px 15px;
 
     &.warning {
         background-color: @box-heading-warning-bg-color;
@@ -36,7 +35,6 @@
     margin-top: 30px;
 }
 
-
 // Spaced
 // ------------------------------
 .box-spaced {
@@ -47,4 +45,67 @@
         display: block;
         font-size: 20px;
     }
+}
+
+// Status box
+// ------------------------------
+.box-status {
+  .box();
+  .clearfix();
+
+  padding: 3px 0;
+}
+
+.box-status .state {
+  .pull-left();
+
+  width: 33%;
+  text-align: center;
+  font-size: (@normalFontSize * 2);
+}
+
+.box-status .details {
+  .pull-left();
+
+  .title {
+    font-weight: normal;
+  }
+
+  .value {
+    font-size: (@normalFontSize * 2);
+    line-height: 1em;
+  }
+
+}
+
+.box-status .status-success {
+  color: @color-success;
+}
+
+.box-status .status-warning {
+  color: @color-warning;
+}
+
+.box-status .status-error {
+  color: @color-danger;
+}
+
+.box-warning {
+  background-color: @color-warning-danger;
+  color: @color-warning-text;
+}
+
+.box-danger {
+  background-color: @color-danger;
+  color: @color-danger-text;
+}
+
+@media (max-width: @screen-md-min) {
+  .box {
+    margin-top: 5px;
+  }
+
+  .box-status {
+    margin-top: 5px;
+  }
 }
