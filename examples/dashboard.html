@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>CentralReport design</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="css/centralreport.css">
+    <script src="js/centralreport.js"></script>
+
+    <script type="text/javascript">
+
+        $(function() {
+            var load = [[139051974200, 1.10], [139051984200, 1.25], [139051994200, 1.60], [139052004200, 2.10], [139052014200, 1.76], [139052024200, 1.25]];
+
+            var cpu = [[139051974200, 20], [139051984200, 55], [139051994200, 35], [139052004200, 75], [139052014200, 14], [139052024200, 10]];
+
+            var memory = [[139051974200, 5.5], [139051984200, 6.9], [139051994200, 7.4], [139052004200, 7.9], [139052014200, 7.2], [139052024200, 7.3]];
+
+            var swap = [[139051974200, 0], [139051984200, 0], [139051994200, 0], [139052004200, 0], [139052014200, 0], [139052024200, 0]];
+
+            $.plot("#graph_load", [load], {
+                xaxis: { mode: "time" }
+            });
+
+            $.plot("#graph_cpu", [cpu], {
+                xaxis: { mode: "time" }
+            });
+
+            $.plot("#graph_memory", [memory], {
+                xaxis: { mode: "time" }
+            });
+
+            $.plot("#graph_swap", [swap], {
+                xaxis: { mode: "time" }
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+<!-- Fixed navbar -->
+<div id="wrapper">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">CentralReport Host</a>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-sign-out fa-fw"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- /.navbar-top-links -->
+    </div>
+
+    <div class="navbar-left navbar-static-side" role="navigation">
+        <div class="sidebar-collapse collapse">
+            <ul class="nav nav-menu" id="side-menu-2">
+                <li>
+                    <a href="index.html"><i class="fa fa-home fa-fw"></i> <span class="title">Home</span></a>
+                </li>
+                <li class="sub-active">
+                    <a href="dashboard.html"><i class="fa fa-tasks fa-fw"></i> <span class="title">Hosts</span></a>
+                </li>
+                <ul class="nav-sub">
+                    <li class="subtitle">
+                        Trinity
+                    </li>
+                    <li class="active">
+                        <a href="dashboard.html"><i class="fa fa-dashboard fa-fw"></i> <span class="title">Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> <span class="title">Details</span></a>
+                    </li>
+                    <li>
+                        <a href="processes.html"><i class="fa fa-list fa-fw"></i> <span class="title">Processes</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-warning fa-fw"></i> <span class="title">Alerts</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-laptop fa-fw"></i> <span class="title">Host info</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-wrench fa-fw"></i> <span class="title">Settings</span></a>
+                    </li>
+                </ul>
+                <li>
+                    <a href="settings.html"><i class="fa fa-user fa-fw"></i> <span class="title">Account</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="page-wrapper" class="extended">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2><i class="fa fa-apple fa-fw"></i>Trinity <small>dashboard</small></h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="box-status">
+                    <div class="state status-success">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <div class="details">
+                        <div class="title">
+                            Load
+                        </div>
+                        <div class="value">
+                            1.25
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="box-status">
+                    <div class="state status-success">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <div class="details">
+                        <div class="title">
+                            CPU
+                        </div>
+                        <div class="value">
+                            10 %
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="box-status box-warning">
+                    <div class="state">
+                        <i class="fa fa-warning"></i>
+                    </div>
+                    <div class="details">
+                        <div class="title">
+                            Memory
+                        </div>
+                        <div class="value">
+                            90 %
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="box-status">
+                    <div class="state status-success">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <div class="details">
+                        <div class="title">
+                            Swap
+                        </div>
+                        <div class="value">
+                            0 %
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="box-status box-danger">
+                    <div class="state">
+                        <i class="fa fa-bolt"></i>
+                    </div>
+                    <div class="details">
+                        <div class="title">
+                            Disks
+                        </div>
+                        <div class="value">
+                            99 %
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="box-status">
+                    <div class="state status-success">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <div class="details">
+                        <div class="title">
+                            Network
+                        </div>
+                        <div class="value">
+                            1 %
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="box">
+                    <div class="box-heading">
+                        Load - History
+                    </div>
+                    <div class="box-content">
+                        <div id="graph_load" style="height:150px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <div class="box">
+                    <div class="box-heading">
+                        CPU - History
+                    </div>
+                    <div class="box-content">
+                        <div id="graph_cpu" style="height:150px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="box">
+                    <div class="box-heading">
+                        Memory - History
+                    </div>
+                    <div class="box-content">
+                        <div id="graph_memory" style="height:150px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="box">
+                    <div class="box-heading">
+                        Swap - History
+                    </div>
+                    <div class="box-content">
+                        <div id="graph_swap" style="height:150px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -2,6 +2,26 @@
 // Navbar Module
 // ------------------------------
 
+.navbar-toggle {
+  float: left;
+  border: 0px solid transparent;
+}
+
+.navbar-toggle:hover {
+  float: left;
+  border: 0px solid transparent;
+  background-color: transparent;
+}
+
+.navbar-header {
+  float: left;
+  margin-left: 10px;
+}
+
+.navbar-right {
+  float: right !important;
+}
+
 /* Top Right Navigation Dropdown Styles */
 .navbar-top-links li {
     display: inline-block;
@@ -66,26 +86,55 @@
     background-color: #fafafa;
 }
 
+.nav-sub {
+  .nav();
+
+  margin-left: 20px;
+  border: 1px solid transparent;
+  border-left-color: @navbar-left-sub-bg;
+}
+
+.nav-sub .subtitle {
+  background-color: @navbar-left-sub-bg;
+  font-weight: 300;
+  color: @color-clouds;
+  padding: 3px;
+}
+
+.nav-sub > li > a {
+  color: @color-clouds;
+}
+
+.nav-sub > li > a:hover,
+.nav-sub > li > a:focus {
+  color: #000000;
+  background-color: #fafafa;
+}
+
+.sub-active {
+  background-color: @navbar-left-sub-bg;
+}
+
 @media (max-width: @screen-sm-min) {
     .navbar-left {
-        margin-top: @navbar-height;
+        //margin-top: @navbar-height;
     }
 }
 
 @media (min-width: @screen-sm-min) {
     .sidebar-collapse {
-        width: auto;
-        border-top: 0;
-        box-shadow: none;
+      width: auto;
+      border-top: 0;
+      box-shadow: none;
     }
     .sidebar-collapse.collapse {
-        display: block !important;
-        height: auto !important;
-        padding-bottom: 0;
-        overflow: visible !important;
+      display: block !important;
+      height: auto !important;
+      padding-bottom: 0;
+      overflow: visible !important;
     }
     .sidebar-collapse.in {
-        overflow-y: visible;
+      overflow-y: visible;
     }
 
     .navbar-static-side {
@@ -97,6 +146,7 @@
 @media (min-width: @screen-sm-min) and (max-width: @screen-md-min) {
     .navbar-static-side {
         width: @navbar-left-sm-width;
+
     }
 
     .navbar-left .title,
@@ -106,7 +156,9 @@
 }
 
 @media (min-width: @screen-md-min) {
-    .navbar-static-side {
-        width: @navbar-left-width;
-    }
+
+
+  .navbar-static-side {
+    width: @navbar-left-width;
+  }
 }
