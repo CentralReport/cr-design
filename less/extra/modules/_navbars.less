@@ -64,10 +64,6 @@
     min-height: 100%;
 }
 
-.navbar-left a {
-    color: @color-white;
-}
-
 .navbar-left .credits {
     margin-top: 20px;
     color: @color-gray;
@@ -77,7 +73,7 @@
 }
 
 .nav > li > a {
-    color: @color-clouds;
+    color: @color-white;
 }
 
 .nav > li > a:hover,
@@ -90,19 +86,19 @@
   .nav();
 
   margin-left: 20px;
-  border: 1px solid transparent;
-  border-left-color: @navbar-left-sub-bg;
+//  border: 1px solid transparent;
+  border-left: 1px solid @navbar-left-sub-bg;
 }
 
 .nav-sub .subtitle {
   background-color: @navbar-left-sub-bg;
   font-weight: 300;
-  color: @color-clouds;
-  padding: 3px;
+  color: @color-white;
+  padding: 0 10px;
 }
 
 .nav-sub > li > a {
-  color: @color-clouds;
+  color: @color-black;
 }
 
 .nav-sub > li > a:hover,
@@ -112,14 +108,18 @@
 }
 
 .sub-active {
-  background-color: @navbar-left-sub-bg;
+  color: @navbar-left-sub-bg;
+
+}
+.sub-active-text {
+  color: @navbar-left-sub-bg !important;
 }
 
-@media (max-width: @screen-sm-min) {
-    .navbar-left {
-        //margin-top: @navbar-height;
-    }
+.sub-active {
+  border-bottom: 1px solid transparent;
+  border-bottom-color: @navbar-left-sub-bg;
 }
+
 
 @media (min-width: @screen-sm-min) {
     .sidebar-collapse {
@@ -146,18 +146,24 @@
 @media (min-width: @screen-sm-min) and (max-width: @screen-md-min) {
     .navbar-static-side {
         width: @navbar-left-sm-width;
-
     }
 
     .navbar-left .title,
     .navbar-left .credits {
         display: none;
     }
+
+    .nav-sub {
+        margin-left: 0px;
+        border-left: 3px solid @navbar-left-sub-bg;
+    }
+
+    .nav-sub .subtitle {
+        display: none;
+    }
 }
 
 @media (min-width: @screen-md-min) {
-
-
   .navbar-static-side {
     width: @navbar-left-width;
   }

@@ -12,100 +12,107 @@
 
 </head>
 <body>
-<!-- Fixed navbar -->
 <div id="wrapper">
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">CentralReport Host</a>
-    </div>
-    <ul class="nav navbar-top-links navbar-right">
-        <li>
-            <a href="#">
-                <i class="fa fa-sign-out fa-fw"></i> Sign out
-            </a>
-        </li>
-    </ul>
-    <!-- /.navbar-top-links -->
-</div>
-
-<div class="navbar-left navbar-static-side" role="navigation">
-    <div class="sidebar">
-        <ul class="nav nav-menu" id="side-menu">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">CentralReport Host</a>
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
             <li>
-                <a href="dashboard.html"><i class="fa fa-dashboard fa-fw"></i> <span class="title">Dashboard</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> <span class="title">Details</span></a>
-            </li>
-            <li class="active">
-                <a href="processes.html"><i class="fa fa-list fa-fw"></i> <span class="title">Processes</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-warning fa-fw"></i> <span class="title">Alerts</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-laptop fa-fw"></i> <span class="title">Host info</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-wrench fa-fw"></i> <span class="title">Settings</span></a>
+                <a href="#">
+                    <i class="fa fa-sign-out fa-fw"></i> Sign out
+                </a>
             </li>
         </ul>
+        <!-- /.navbar-top-links -->
     </div>
-    <!-- /.sidebar-collapse -->
-</div>
-<!-- /.navbar-static-side -->
-
-<div id="page-wrapper" class="extended">
-
-    <div class="row">
-        <div class="col-sm-8">
-            <h2>Processes <small>top 10</small></h2>
+    <div class="navbar-left navbar-static-side" role="navigation">
+        <div class="sidebar-collapse collapse">
+            <ul class="menu-left-main" id="side-menu-2">
+                <li>
+                    <a href="index.html"><i class="fa fa-home fa-fw"></i> <span class="title">Home</span></a>
+                </li>
+                <li class="active">
+                    <a href="dashboard.html"><i class="fa fa-tasks fa-fw"></i> <span class="title">Hosts</span></a>
+                </li>
+                <ul class="menu-left-sub">
+                    <li>
+                        <a href="dashboard.html"><i class="fa fa-dashboard fa-fw"></i> <span class="title">Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> <span class="title">Details</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="processes.html"><i class="fa fa-list fa-fw"></i> <span class="title">Processes</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-warning fa-fw"></i> <span class="title">Alerts</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-laptop fa-fw"></i> <span class="title">Host info</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-wrench fa-fw"></i> <span class="title">Settings</span></a>
+                    </li>
+                </ul>
+                <li>
+                    <a href="settings.html"><i class="fa fa-user fa-fw"></i> <span class="title">Account</span></a>
+                </li>
+            </ul>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-sm-7">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Count</th>
-                    <th>CPU</th>
-                    <th>Memory</th>
-                </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Apache</td>
-                        <td>5</td>
-                        <td>5 %</td>
-                        <td>200 MB <small>(50 %)</small></td>
-                    </tr>
-                    <tr>
-                        <td>MySQL</td>
-                        <td>2</td>
-                        <td>1 %</td>
-                        <td>50 MB <small>(10 %)</small></td>
-                    </tr>
-                    <tr>
-                        <td>CentralReport</td>
-                        <td>1</td>
-                        <td>0.1 %</td>
-                        <td>17 MB <small>(2 %)</small></td>
-                    </tr>
-                </tbody>
-            </table>
+    <div id="page-wrapper" class="extended">
+
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>Processes <small>top 10</small></h2>
+            </div>
         </div>
-        <div class="col-sm-5">
+
+        <div class="row">
+            <div class="col-sm-7">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Count</th>
+                        <th>CPU</th>
+                        <th>Memory</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Apache</td>
+                            <td>5</td>
+                            <td>5 %</td>
+                            <td>200 MB <small>(50 %)</small></td>
+                        </tr>
+                        <tr>
+                            <td>MySQL</td>
+                            <td>2</td>
+                            <td>1 %</td>
+                            <td>50 MB <small>(10 %)</small></td>
+                        </tr>
+                        <tr>
+                            <td>CentralReport</td>
+                            <td>1</td>
+                            <td>0.1 %</td>
+                            <td>17 MB <small>(2 %)</small></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-5">
+            </div>
         </div>
     </div>
-</div>
 </div>
 </body>
 </html>
