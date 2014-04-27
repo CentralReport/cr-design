@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>CentralReport design</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="css/centralreport.css">
+    <script src="js/centralreport.js"></script>
+
+    <script type="text/javascript">
+
+        $(function() {
+            var load = [[139051974200, 1.10], [139051984200, 1.25], [139051994200, 1.60], [139052004200, 2.10], [139052014200, 1.76], [139052024200, 1.25]];
+
+            var cpu = [[139051974200, 20], [139051984200, 55], [139051994200, 35], [139052004200, 75], [139052014200, 14], [139052024200, 10]];
+
+            var memory = [[139051974200, 5.5], [139051984200, 6.9], [139051994200, 7.4], [139052004200, 7.9], [139052014200, 7.2], [139052024200, 7.3]];
+
+            var swap = [[139051974200, 0], [139051984200, 0], [139051994200, 0], [139052004200, 0], [139052014200, 0], [139052024200, 0]];
+
+            $.plot("#graph_load", [load], {
+                xaxis: { mode: "time" }
+            });
+
+            $.plot("#graph_cpu", [cpu], {
+                xaxis: { mode: "time" }
+            });
+
+            $.plot("#graph_memory", [memory], {
+                xaxis: { mode: "time" }
+            });
+
+            $.plot("#graph_swap", [swap], {
+                xaxis: { mode: "time" }
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+<!-- Fixed navbar -->
+<div id="wrapper">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">CentralReport Host</a>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-sign-out fa-fw"></i> Sign out
+                    </a>
+                </li>
+            </ul>
+            <!-- /.navbar-top-links -->
+    </div>
+
+    <div class="navbar-left navbar-static-side" role="navigation">
+        <div class="sidebar-collapse collapse">
+            <ul class="menu-left-main" id="side-menu-2">
+                <li>
+                    <a href="index.html"><i class="fa fa-home fa-fw"></i> <span class="title">Home</span></a>
+                </li>
+                <li>
+                    <a href="dashboard.html"><i class="fa fa-tasks fa-fw"></i> <span class="title">Hosts</span></a>
+                </li>
+                <li class="active">
+                    <a href="settings.html"><i class="fa fa-user fa-fw"></i> <span class="title">Account</span></a>
+                </li>
+                <ul class="menu-left-sub">
+                    <li class="active">
+                        <a href="#"><i class="fa fa-user fa-fw"></i> <span class="title">Profile</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-asterisk fa-fw"></i> <span class="title">Password</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-key fa-fw"></i> <span class="title">Security</span></a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+
+    <div id="page-wrapper" class="extended">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>Edit your profile</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box">
+                    <div class="box-heading">
+                        About you...
+                    </div>
+                    <div class="box-content box-content-spaced">
+                        <form action="/settings/" method="post"  class="form">
+                            <div id="cr_profile"><div class="form-group"><label for="cr_profile_displayName" class="required">Display Name</label><input type="text" id="cr_profile_displayName" name="cr_profile[displayName]" required="required"    class="form-control" value="Charles-Emmanuel" /></div><div class="form-group"><label for="cr_profile_username" class="required">Username</label><input type="text" id="cr_profile_username" name="cr_profile[username]" required="required"    class="form-control" value="che.camus@gmail.com" /></div><input type="hidden" id="cr_profile__token" name="cr_profile[_token]" value="3a37b3725fef1fe95ab74b0e34b8e39c2cb9b410" /></div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-submit pull-right">
+                                    Save
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

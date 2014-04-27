@@ -2,6 +2,26 @@
 // Navbar Module
 // ------------------------------
 
+.navbar-toggle {
+  float: left;
+  border: 0px solid transparent;
+}
+
+.navbar-toggle:hover {
+  float: left;
+  border: 0px solid transparent;
+  background-color: transparent;
+}
+
+.navbar-header {
+  float: left;
+  margin-left: 10px;
+}
+
+.navbar-right {
+  float: right !important;
+}
+
 /* Top Right Navigation Dropdown Styles */
 .navbar-top-links li {
     display: inline-block;
@@ -44,10 +64,6 @@
     min-height: 100%;
 }
 
-.navbar-left a {
-    color: @color-white;
-}
-
 .navbar-left .credits {
     margin-top: 20px;
     color: @color-gray;
@@ -57,7 +73,7 @@
 }
 
 .nav > li > a {
-    color: @color-clouds;
+    color: @color-white;
 }
 
 .nav > li > a:hover,
@@ -66,26 +82,59 @@
     background-color: #fafafa;
 }
 
-@media (max-width: @screen-sm-min) {
-    .navbar-left {
-        margin-top: @navbar-height;
-    }
+.nav-sub {
+  .nav();
+
+  margin-left: 20px;
+//  border: 1px solid transparent;
+  border-left: 1px solid @navbar-left-sub-bg;
 }
+
+.nav-sub .subtitle {
+  background-color: @navbar-left-sub-bg;
+  font-weight: 300;
+  color: @color-white;
+  padding: 0 10px;
+}
+
+.nav-sub > li > a {
+  color: @color-black;
+}
+
+.nav-sub > li > a:hover,
+.nav-sub > li > a:focus {
+  color: #000000;
+  background-color: #fafafa;
+}
+
+.sub-active {
+  color: @navbar-left-sub-bg;
+
+}
+.sub-active-text {
+  color: @navbar-left-sub-bg !important;
+}
+
+.sub-active {
+  border-bottom: 1px solid transparent;
+  border-bottom-color: @navbar-left-sub-bg;
+}
+
 
 @media (min-width: @screen-sm-min) {
     .sidebar-collapse {
-        width: auto;
-        border-top: 0;
-        box-shadow: none;
+      width: auto;
+      border-top: 0;
+      box-shadow: none;
     }
     .sidebar-collapse.collapse {
-        display: block !important;
-        height: auto !important;
-        padding-bottom: 0;
-        overflow: visible !important;
+      display: block !important;
+      height: auto !important;
+      padding-bottom: 0;
+      overflow: visible !important;
     }
     .sidebar-collapse.in {
-        overflow-y: visible;
+      overflow-y: visible;
     }
 
     .navbar-static-side {
@@ -103,10 +152,19 @@
     .navbar-left .credits {
         display: none;
     }
+
+    .nav-sub {
+        margin-left: 0px;
+        border-left: 3px solid @navbar-left-sub-bg;
+    }
+
+    .nav-sub .subtitle {
+        display: none;
+    }
 }
 
 @media (min-width: @screen-md-min) {
-    .navbar-static-side {
-        width: @navbar-left-width;
-    }
+  .navbar-static-side {
+    width: @navbar-left-width;
+  }
 }
