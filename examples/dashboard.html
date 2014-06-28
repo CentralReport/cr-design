@@ -66,7 +66,7 @@
 
     <div class="navbar-left navbar-static-side" role="navigation">
         <div class="sidebar-collapse collapse">
-            <ul class="menu-left-main" id="side-menu-2">
+            <ul class="menu-left" id="side-menu-2">
                 <li>
                     <a href="index.html"><i class="fa fa-home fa-fw"></i> <span class="title">Home</span></a>
                 </li>
@@ -103,144 +103,104 @@
     <div id="page-wrapper" class="extended">
         <div class="row">
             <div class="col-sm-8">
-                <h2><i class="fa fa-apple fa-fw"></i>Trinity <small>dashboard</small></h2>
+                <h2><i class="fa fa-apple fa-fw"></i>Trinity <small>OS X 10.9.4</small></h2>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-sm-2">
-                <div class="box-status">
-                    <div class="state status-success">
-                        <i class="fa fa-check"></i>
+            <div class="col-sm-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">CPU (%)</h3>
                     </div>
-                    <div class="details">
-                        <div class="title">
-                            Load
-                        </div>
-                        <div class="value">
-                            1.25
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="box-status">
-                    <div class="state status-success">
-                        <i class="fa fa-check"></i>
-                    </div>
-                    <div class="details">
-                        <div class="title">
-                            CPU
-                        </div>
-                        <div class="value">
-                            10 %
+                    <div class="panel-body">
+                        <div class="panel-stats">
+                            <div class="col-sm-4 text-center">
+                                <h1>0</h1>
+                                <h5>User</h5>
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <h1>0</h1>
+                                <h5>System</h5>
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <h1>100</h1>
+                                <h5>Free</h5>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-2">
-                <div class="box-status box-warning">
-                    <div class="state">
-                        <i class="fa fa-warning"></i>
+            <div class="col-sm-4">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Memory</h3>
                     </div>
-                    <div class="details">
-                        <div class="title">
-                            Memory
-                        </div>
-                        <div class="value">
-                            90 %
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="box-status">
-                    <div class="state status-success">
-                        <i class="fa fa-check"></i>
-                    </div>
-                    <div class="details">
-                        <div class="title">
-                            Swap
-                        </div>
-                        <div class="value">
-                            0 %
+                    <div class="panel-body">
+                        <div class="panel-stats">
+                            <div class="col-sm-6 text-center">
+                                <h1>0</h1>
+                                <h5>User</h5>
+                            </div>
+                            <div class="col-sm-6 text-center">
+                                <h1>0</h1>
+                                <h5>User</h5>
+                            </div>
+                            <div class="col-sm-6 text-center">
+                                <h1>0</h1>
+                                <h5>User</h5>
+                            </div>
+                            <div class="col-sm-6 text-center">
+                                <h1>0</h1>
+                                <h5>User</h5>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-2">
-                <div class="box-status box-danger">
-                    <div class="state">
-                        <i class="fa fa-bolt"></i>
+            <div class="col-sm-4">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Swap</h3>
                     </div>
-                    <div class="details">
-                        <div class="title">
-                            Disks
-                        </div>
-                        <div class="value">
-                            99 %
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="box-status">
-                    <div class="state status-success">
-                        <i class="fa fa-check"></i>
-                    </div>
-                    <div class="details">
-                        <div class="title">
-                            Network
-                        </div>
-                        <div class="value">
-                            1 %
-                        </div>
+                    <div class="panel-body">
+                        <h4>No swap on this host</h4>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="row">
-            <div class="col-sm-5">
-                <div class="box">
-                    <div class="box-heading">
-                        Load - History
+            <div class="col-sm-4">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Load average</h3>
                     </div>
-                    <div class="box-content">
-                        <div id="graph_load" style="height:150px;"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-7">
-                <div class="box">
-                    <div class="box-heading">
-                        CPU - History
-                    </div>
-                    <div class="box-content">
-                        <div id="graph_cpu" style="height:150px;"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-7">
-                <div class="box">
-                    <div class="box-heading">
-                        Memory - History
-                    </div>
-                    <div class="box-content">
-                        <div id="graph_memory" style="height:150px;"></div>
+                    <div class="panel-body">
+                        <div class="panel-stats">
+                            <div class="col-sm-4 text-center">
+                                <h1>0</h1>
+                                <h5>1 m</h5>
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <h1>0</h1>
+                                <h5>5 m</h5>
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <h1>100</h1>
+                                <h5>15 m</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-5">
-                <div class="box">
-                    <div class="box-heading">
-                        Swap - History
+            <div class="col-sm-8">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Uptime</h3>
                     </div>
-                    <div class="box-content">
-                        <div id="graph_swap" style="height:150px;"></div>
+                    <div class="panel-body">
+                        <h3>1 hour 48 minutes 32 seconds (6 512 seconds)</h3>
+                        <h5>Boot date: 2014-06-28 18:14:41</h5>
                     </div>
                 </div>
             </div>
