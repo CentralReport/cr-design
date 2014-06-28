@@ -2,6 +2,11 @@
 // Navbar Module
 // ------------------------------
 
+.navbar-default {
+  .navbar-default();
+  border: 0px solid;
+}
+
 .navbar-toggle {
   float: left;
   border: 0px solid transparent;
@@ -60,6 +65,7 @@
 
 /* Top Right Navigation Dropdown Styles */
 .navbar-left {
+    border-right: 1px solid darken(@navbar-left-bg, 10%);
     background-color: @navbar-left-bg;
     min-height: 100%;
 }
@@ -80,6 +86,15 @@
 .nav > li > a:focus {
     color: #000000;
     background-color: #fafafa;
+}
+
+/* Toggle navbar */
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: @navbar-default-color;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: lighten(@navbar-default-bg, 10);
 }
 
 @media (min-width: @screen-sm-min) {
