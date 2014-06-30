@@ -7418,6 +7418,18 @@ h5 small,
 h6 small {
   font-weight: 300;
 }
+.stat-large {
+  font-size: 2.5em;
+}
+.stat-medium {
+  font-size: 2em;
+}
+.stat-small {
+  font-size: 1.3em;
+}
+.stat-subtitle {
+  font-size: 1em;
+}
 .form-inline {
   display: inline;
 }
@@ -7814,8 +7826,6 @@ body {
   margin-top: 0px;
 }
 .panel-footer {
-  width: 100%;
-  display: table;
   border: none;
 }
 .list-hosts li {
