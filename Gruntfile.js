@@ -68,7 +68,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     '<%= cr.dirs.build %>/js/centralreport.js' : [
-                        '<%= cr.dirs.vendor %>/jquery/jquery.js',
+                        '<%= cr.dirs.vendor %>/jquery/dist/jquery.js',
                         '<%= cr.dirs.vendor %>/bootstrap/dist/js/bootstrap.js'
                     ]
                 }
@@ -79,7 +79,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     '<%= cr.dirs.build %>/js/centralreport.min.js' : [
-                        '<%= cr.dirs.vendor %>/jquery/jquery.js',
+                        '<%= cr.dirs.vendor %>/jquery/dist/jquery.js',
                         '<%= cr.dirs.vendor %>/bootstrap/dist/js/bootstrap.js'
                     ]
                 }
