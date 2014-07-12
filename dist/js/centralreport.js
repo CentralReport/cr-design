@@ -1,4 +1,4 @@
-/*! CentralReport_design - DEV - 2014-07-03 */
+/*! CentralReport_design - DEV - 2014-07-13 */
 if (function(global, factory) {
     "object" == typeof module && "object" == typeof module.exports ? module.exports = global.document ? factory(global, !0) : function(w) {
         if (!w.document) throw new Error("jQuery requires a window with a document");
@@ -347,7 +347,7 @@ if (function(global, factory) {
     }
     var arr = [], slice = arr.slice, concat = arr.concat, push = arr.push, indexOf = arr.indexOf, class2type = {}, toString = class2type.toString, hasOwn = class2type.hasOwnProperty, support = {}, document = window.document, version = "2.1.1", jQuery = function(selector, context) {
         return new jQuery.fn.init(selector, context);
-    }, rtrim = /^[\s﻿ ]+|[\s﻿ ]+$/g, rmsPrefix = /^-ms-/, rdashAlpha = /-([\da-z])/gi, fcamelCase = function(all, letter) {
+    }, rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, rmsPrefix = /^-ms-/, rdashAlpha = /-([\da-z])/gi, fcamelCase = function(all, letter) {
         return letter.toUpperCase();
     };
     jQuery.fn = jQuery.prototype = {
