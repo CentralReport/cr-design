@@ -3,6 +3,7 @@
   "private": true,
     "dependencies": {
         "bootstrap": "3.2.*",
+        "bootstrap-additions": "0.2.*",
         "font-awesome": "4.1.*"
     }
 }
