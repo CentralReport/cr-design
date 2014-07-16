@@ -5944,8 +5944,6 @@ button.close {
 .panel-body:after,
 .modal-footer:before,
 .modal-footer:after,
-.aside .aside-dialog .aside-footer:before,
-.aside .aside-dialog .aside-footer:after,
 .row-panel:before,
 .row-panel:after {
   content: " ";
@@ -5966,7 +5964,6 @@ button.close {
 .pager:after,
 .panel-body:after,
 .modal-footer:after,
-.aside .aside-dialog .aside-footer:after,
 .row-panel:after {
   clear: both;
 }
@@ -6219,75 +6216,121 @@ button.close {
     display: none !important;
   }
 }
-/*
- * Alerts placement
+/**
+ * angular-strap
+ * @version v2.0.3 - 2014-06-20
+ * @link http://mgcrea.github.io/angular-strap
+ * @author Olivier Louvignes (olivier@mg-crea.com)
+ * @license MIT License, http://www.opensource.org/licenses/MIT
  */
+.carousel-inner > .item > a > img,
+.carousel-inner > .item > img,
+.thumbnail a > img,
+.thumbnail > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.btn-group-lg > .btn {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+.btn-group-sm > .btn {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.btn-group-xs > .btn {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.aside .aside-dialog .aside-footer:after,
+.aside .aside-dialog .aside-footer:before,
+.btn-group-vertical > .btn-group:after,
+.btn-group-vertical > .btn-group:before,
+.btn-toolbar:after,
+.btn-toolbar:before,
+.container-fluid:after,
+.container-fluid:before,
+.container:after,
+.container:before,
+.form-horizontal .form-group:after,
+.form-horizontal .form-group:before,
+.modal-footer:after,
+.modal-footer:before,
+.nav:after,
+.nav:before,
+.navbar-collapse:after,
+.navbar-collapse:before,
+.navbar-header:after,
+.navbar-header:before,
+.navbar:after,
+.navbar:before,
+.pager:after,
+.pager:before,
+.panel-body:after,
+.panel-body:before,
+.row:after,
+.row:before {
+  content: " ";
+  display: table;
+}
+.aside .aside-dialog .aside-footer:after,
+.btn-group-vertical > .btn-group:after,
+.btn-toolbar:after,
+.container-fluid:after,
+.container:after,
+.form-horizontal .form-group:after,
+.modal-footer:after,
+.nav:after,
+.navbar-collapse:after,
+.navbar-header:after,
+.navbar:after,
+.pager:after,
+.panel-body:after,
+.row:after {
+  clear: both;
+}
 .alert.top,
 .alert.top-left,
-.alert.top-right,
-.alert.bottom,
-.alert.bottom-left,
-.alert.bottom-right {
+.alert.top-right {
   position: fixed;
+  top: 50px;
   z-index: 1050;
   margin: 20px;
 }
-.alert.top,
-.alert.top-left,
-.alert.top-right {
-  top: 45px;
-}
 .alert.top {
-  right: 0px;
-  left: 0px;
+  right: 0;
+  left: 0;
 }
 .alert.top-right {
-  right: 0px;
+  right: 0;
 }
 .alert.top-right .close {
   padding-left: 10px;
 }
 .alert.top-left {
-  left: 0px;
+  left: 0;
 }
 .alert.top-left .close {
   padding-right: 10px;
 }
-.alert.bottom,
-.alert.bottom-right,
-.alert.bottom-left {
-  bottom: 0px;
-}
-.alert.bottom {
-  right: 0px;
-  left: 0px;
-}
-.alert.bottom-right {
-  right: 0px;
-}
-.alert.bottom-right .close {
-  padding-left: 10px;
-}
-.alert.bottom-left {
-  left: 0px;
-}
-.alert.bottom-left .close {
-  padding-right: 10px;
-}
-/*
- * Aside element
- */
 .aside {
-  position: fixed;
-  top: 0;
-  bottom: 0;
   z-index: 1049;
+  background: #fff;
+  position: fixed;
   overflow: auto;
   min-width: 320px;
-  background: white;
+  top: 0;
+  bottom: 0;
 }
 .aside:focus {
-  outline: none;
+  outline: 0;
 }
 @media (max-width: 991px) {
   .aside {
@@ -6295,34 +6338,34 @@ button.close {
   }
 }
 .aside.left {
-  right: auto;
   left: 0;
+  right: auto;
 }
 .aside.right {
-  right: 0;
   left: auto;
+  right: 0;
 }
 .aside .aside-dialog .aside-header {
-  padding: 15px;
   border-bottom: 1px solid #e5e5e5;
-  min-height: 16.42857143px;
+  min-height: 16.43px;
   padding: 6px 15px;
   background: #428bca;
-  color: white;
+  color: #ffffff;
 }
 .aside .aside-dialog .aside-header .close {
-  margin-right: -8px;
-  padding: 4px 8px;
-  color: white;
+  color: #fff;
   font-size: 25px;
   opacity: .8;
+  padding: 4px 8px;
+  margin-right: -8px;
 }
 .aside .aside-dialog .aside-body {
   position: relative;
-  padding: 15px;
+  padding: 20px;
 }
 .aside .aside-dialog .aside-footer {
-  padding: 15px;
+  margin-top: 15px;
+  padding: 19px 20px 20px;
   text-align: right;
   border-top: 1px solid #e5e5e5;
 }
@@ -6346,27 +6389,21 @@ button.close {
   background-color: #000000;
 }
 .aside-backdrop.fade {
-  filter: alpha(opacity=0);
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
   opacity: 0;
+  filter: alpha(opacity=0);
 }
 .aside-backdrop.in {
+  opacity: .5;
   filter: alpha(opacity=50);
-  -webkit-opacity: 0.5;
-  -moz-opacity: 0.5;
-  opacity: 0.5;
 }
-/*
- * Callouts
- *
- * Not quite alerts, but custom and helpful notes for folks reading the docs.
- * Requires a base and modifier class.
- */
+.aside-backdrop.animation-fade {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
 .callout {
   margin: 20px 0;
   padding: 20px;
-  border-left: 3px solid #eee;
+  border-left: 3px solid #eeeeee;
 }
 .callout h4 {
   margin-top: 0;
@@ -6375,7 +6412,6 @@ button.close {
 .callout p:last-child {
   margin-bottom: 0;
 }
-/* Variations */
 .callout-danger {
   border-color: #eed3d7;
   background-color: #fdf7f7;
@@ -6397,27 +6433,6 @@ button.close {
 .callout-info h4 {
   color: #34789a;
 }
-/*
- * Datepicker element
- */
-.datepicker.dropdown-menu {
-  width: 250px;
-  height: 270px;
-}
-.datepicker.dropdown-menu button {
-  outline: none;
-  border: 0px;
-}
-.datepicker.dropdown-menu tbody {
-  height: 180px;
-}
-.datepicker.dropdown-menu tbody button {
-  padding: 6px;
-}
-.datepicker.dropdown-menu.datepicker-mode-1 tbody button,
-.datepicker.dropdown-menu.datepicker-mode-2 tbody button {
-  height: 65px;
-}
 .modal.center .modal-dialog {
   position: fixed;
   top: 40%;
@@ -6425,21 +6440,22 @@ button.close {
   min-width: 320px;
   max-width: 630px;
   width: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
-/*
- * Popovers corner placement
- *
- * Inherit exotic positionning from basic ones & fix arrow placement
- */
+[tabindex="-1"] {
+  outline: 0;
+}
+a[ng-click] {
+  cursor: pointer;
+}
 .popover.top-left {
   margin-top: -10px;
 }
 .popover.top-left .arrow {
-  left: 50%;
   margin-left: -11px;
   border-bottom-width: 0;
-  border-top-color: #999999;
+  border-top-color: #999;
   border-top-color: rgba(0, 0, 0, 0.25);
   bottom: -11px;
   left: 10%;
@@ -6455,10 +6471,9 @@ button.close {
   margin-top: -10px;
 }
 .popover.top-right .arrow {
-  left: 50%;
   margin-left: -11px;
   border-bottom-width: 0;
-  border-top-color: #999999;
+  border-top-color: #999;
   border-top-color: rgba(0, 0, 0, 0.25);
   bottom: -11px;
   left: 90%;
@@ -6474,10 +6489,9 @@ button.close {
   margin-top: 10px;
 }
 .popover.bottom-left .arrow {
-  left: 50%;
   margin-left: -11px;
   border-top-width: 0;
-  border-bottom-color: #999999;
+  border-bottom-color: #999;
   border-bottom-color: rgba(0, 0, 0, 0.25);
   top: -11px;
   left: 10%;
@@ -6493,10 +6507,9 @@ button.close {
   margin-top: 10px;
 }
 .popover.bottom-right .arrow {
-  left: 50%;
   margin-left: -11px;
   border-top-width: 0;
-  border-bottom-color: #999999;
+  border-bottom-color: #999;
   border-bottom-color: rgba(0, 0, 0, 0.25);
   top: -11px;
   left: 90%;
@@ -6508,23 +6521,6 @@ button.close {
   border-top-width: 0;
   border-bottom-color: #ffffff;
 }
-/*
- * Timepicker element
- */
-.timepicker.dropdown-menu {
-  padding: 0 4px;
-}
-.timepicker.dropdown-menu button {
-  outline: none;
-  border: 0px;
-}
-.timepicker.dropdown-menu tbody button {
-  padding: 6px;
-}
-/*
- * Fancy tooltips
- *
- */
 .tooltip.tooltip-info.top .tooltip-arrow,
 .tooltip.tooltip-info.top-left .tooltip-arrow,
 .tooltip.tooltip-info.top-right .tooltip-arrow {
@@ -6606,21 +6602,15 @@ button.close {
 .tooltip.tooltip-danger .tooltip-inner .alert-link {
   color: #843534;
 }
-/*
- * Tooltip corner placement
- *
- * Inherit exotic positionning from basic ones & fix arrow placement
- */
 .tooltip.top-left {
   margin-top: -3px;
   padding: 5px 0;
 }
 .tooltip.top-left .tooltip-arrow {
   bottom: 0;
-  left: 50%;
   margin-left: -5px;
   border-width: 5px 5px 0;
-  border-top-color: #000000;
+  border-top-color: #000;
   left: 10%;
 }
 .tooltip.top-right {
@@ -6629,10 +6619,9 @@ button.close {
 }
 .tooltip.top-right .tooltip-arrow {
   bottom: 0;
-  left: 50%;
   margin-left: -5px;
   border-width: 5px 5px 0;
-  border-top-color: #000000;
+  border-top-color: #000;
   left: 90%;
 }
 .tooltip.bottom-left {
@@ -6641,10 +6630,9 @@ button.close {
 }
 .tooltip.bottom-left .tooltip-arrow {
   top: 0;
-  left: 50%;
   margin-left: -5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #000000;
+  border-bottom-color: #000;
   left: 10%;
 }
 .tooltip.bottom-right {
@@ -6653,10 +6641,9 @@ button.close {
 }
 .tooltip.bottom-right .tooltip-arrow {
   top: 0;
-  left: 50%;
   margin-left: -5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #000000;
+  border-bottom-color: #000;
   left: 90%;
 }
 /*!
