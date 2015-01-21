@@ -2,8 +2,6 @@
 // - LESS Variables
 // ------------------------------
 
-// TODO - Rename this vars using dashes
-
 // Colors
 // -------------------------
 @color-alizarin:    #e74c3c;
@@ -41,24 +39,17 @@
 @body-bg-color:         @color-white;
 @border-color:          darken(@color-gray, 5%);
 
-@color-danger:          @color-alizarin;
-@color-danger-text:     @color-white;
-@color-info:            @color-peter-river;
-@color-success:         @color-emerald;
-@color-success-text:    @color-white;
-@color-warning:         @color-sunflower;
-@color-warning-text:    @color-white;
-@color-warning-danger:  @color-carrot;
-@color-warning-text:    @color-white;
+@color-danger:          #ebccd1;
+@color-danger-text:     #a94442;
+@color-info:            #e1f0fa;
+@color-info-text:       #31708f;
+@color-success:         #d6e9c6;
+@color-success-text:    #3c763d;
+@color-warning:         #faebcc;
+@color-warning-text:    #8a6d3b;
 
 // Modules
 // -------------------------
-
-// - Boxes
-@box-heading-bg-color:          @color-peter-river;
-@box-heading-color:             @color-white;
-@box-heading-warning-bg-color:  @color-carrot;
-@box-heading-warning-color:     @color-white;
 
 // - Sub Navigation
 @subnavColor: lighten(@navbar-default-bg, 10%);
@@ -68,53 +59,57 @@
 @list-stats-bg-color-odd: lighten(@color-peter-river, 15);
 @list-stats-color:        @color-white;
 
-// - Menus
-@menu-active-bgcolor:   #3498db;
-@menu-active-color:     @color-white;
-@menu-bgcolor:          @color-white;
+// - Left menu
+@menu-text-color:             #576070;
+
+@menu-hover-text-color:       #31708f;
+@menu-active-text-color:      @menu-hover-text-color;
+@menu-active-border-right:    @menu-hover-text-color;
+
+@menu-sub-bg-color:           #ffffff;
+@menu-sub-text-color:         @menu-text-color;
+@menu-sub-hover-text-color:   @menu-hover-text-color;
+@menu-sub-active-text-color:  @menu-active-border-right;
 
 // - Navbar
-@navbar-height:         45px;
-@navbar-default-bg:     #444444;
-@navbar-default-color:  @color-white;
+@navbar-left-sm-width:    50px;
+@navbar-left-width:       175px;
+@navbar-left-bg:          #f3f5f6;
 
-@navbar-left-sub-bg:    #3498db;
+@navbar-height:         45px;
+@navbar-default-bg:     #31708f;
+@navbar-default-color:  @color-white;
 
 @navbar-default-link-color:         @color-white;
 @navbar-default-link-active-color:  @color-white;
-@navbar-default-link-hover-color:   darken(@navbar-default-link-color, 6.5%);
+@navbar-default-link-hover-color:   @color-info;
 
-@navbar-left-sm-width:    50px;
-@navbar-left-width:       175px;
-@navbar-left-bg:          #e5e5e5;
 
+// - Panel
+@panel-info-border:         @color-info;
+@panel-info-heading-bg:     @panel-info-border;
+
+@panel-success-heading-bg:  @panel-success-border;
+@panel-default-heading-bg:  @panel-default-border;
+@panel-warning-heading-bg:  @panel-warning-border;
+@panel-danger-heading-bg:   @panel-danger-border;
 
 // - Notes
-@note-danger-border:    lighten(@color-danger, 10%);
-@note-danger-color-bg:  lighten(@color-danger, 40%);
+@note-danger-border:        @color-danger-text;
+@note-danger-color-bg:      @color-danger;
 
-@note-info-border:      lighten(@color-info, 10%);
-@note-info-color-bg:    lighten(@color-info, 40%);
+@note-info-border:          @color-info-text;
+@note-info-color-bg:        @color-info;
 
-@note-success-border:   lighten(@color-success, 10%);
-@note-success-color-bg: lighten(@color-success, 40%);
+@note-success-border:       @color-success-text;
+@note-success-color-bg:     @color-success;
 
-@note-warning-border:   lighten(@color-warning, 10%);
-@note-warning-color-bg: lighten(@color-warning, 40%);
+@note-warning-border:       @color-warning-text;
+@note-warning-color-bg:     @color-warning;
 
 // - SmallStats
 @smallstart-content-color:      @color-asphalt;
 @smallstart-subcontent-color:   #c7cbd5;
-
-// - Stats
-@stat-danger-border:  lighten(@color-danger, 10%);
-@stat-default-border: lighten(@color-concrete, 10%);
-@stat-info-border:    lighten(@color-info, 10%);
-@stat-success-border: lighten(@color-success, 10%);
-@stat-warning-border: lighten(@color-warning, 10%);
-
-// - Steps
-@step-heading-color: @color-concrete;
 
 // Paths
 // -------------------------

@@ -2,6 +2,11 @@
 // Navbar Module
 // ------------------------------
 
+.navbar-default {
+  .navbar-default();
+  border: 0px solid;
+}
+
 .navbar-toggle {
   float: left;
   border: 0px solid transparent;
@@ -60,6 +65,7 @@
 
 /* Top Right Navigation Dropdown Styles */
 .navbar-left {
+    border-right: 1px solid darken(@navbar-left-bg, 10%);
     background-color: @navbar-left-bg;
     min-height: 100%;
 }
@@ -82,44 +88,14 @@
     background-color: #fafafa;
 }
 
-.nav-sub {
-  .nav();
-
-  margin-left: 20px;
-//  border: 1px solid transparent;
-  border-left: 1px solid @navbar-left-sub-bg;
+/* Toggle navbar */
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: @navbar-default-color;
 }
 
-.nav-sub .subtitle {
-  background-color: @navbar-left-sub-bg;
-  font-weight: 300;
-  color: @color-white;
-  padding: 0 10px;
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: lighten(@navbar-default-bg, 10);
 }
-
-.nav-sub > li > a {
-  color: @color-black;
-}
-
-.nav-sub > li > a:hover,
-.nav-sub > li > a:focus {
-  color: #000000;
-  background-color: #fafafa;
-}
-
-.sub-active {
-  color: @navbar-left-sub-bg;
-
-}
-.sub-active-text {
-  color: @navbar-left-sub-bg !important;
-}
-
-.sub-active {
-  border-bottom: 1px solid transparent;
-  border-bottom-color: @navbar-left-sub-bg;
-}
-
 
 @media (min-width: @screen-sm-min) {
     .sidebar-collapse {
@@ -150,15 +126,6 @@
 
     .navbar-left .title,
     .navbar-left .credits {
-        display: none;
-    }
-
-    .nav-sub {
-        margin-left: 0px;
-        border-left: 3px solid @navbar-left-sub-bg;
-    }
-
-    .nav-sub .subtitle {
         display: none;
     }
 }

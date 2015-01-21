@@ -2,6 +2,16 @@
 // Grid Module
 // ------------------------------
 
-.row + .row {
-    margin-top: 30px;
+
+.row + .row,
+.row + .row-panel {
+    margin-top: 20px;
+}
+
+.row-panel {
+  .row();
+}
+
+.row-panel + .row-panel {
+  margin-top: 0px;
 }
